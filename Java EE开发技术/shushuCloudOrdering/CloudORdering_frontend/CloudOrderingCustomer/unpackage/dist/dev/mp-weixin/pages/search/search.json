@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-popup": "/uview-ui/components/u-popup/u-popup",
+    "u-button": "/uview-ui/components/u-button/u-button",
+    "u-section": "/uview-ui/components/u-section/u-section",
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "u-empty": "/uview-ui/components/u-empty/u-empty"
+  }
+}

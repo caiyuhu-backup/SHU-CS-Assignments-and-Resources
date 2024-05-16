@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.userMapper">
+    <!--根据客户编号获取客户信息 -->
+    <select id="findUserById" parameterType="Integer"
+            resultType="com.example.experiment8.model.User">
+        select *
+        from userinfo
+        where id = #{id}
+    </select>
+
+    <select id="findAllUser" resultType="com.example.experiment8.model.User">
+        select *
+        from userinfo
+    </select>
+
+    <select id="findUser" resultType="com.example.experiment8.model.User">
+        select *
+        from userinfo
+        where userinfo.username = #{username}
+          and userinfo.password = #{password}
+    </select>
+
+    <!--根据客户名模糊查询客户信息列表-->
+    <select id="findUserByName" parameterType="String"
+            resultType="com.example.experiment8.model.User">
+        select *
+        from userinfo
+        where userinfo.username like
+              concat('%', #{value}, '%')
+    </select>
+
+    <!-- 添加客户信息 -->
+    <insert id="addUser" parameterType="com.example.experiment8.model.User">
+        insert into userinfo(username, password)
+        values (#{name}, #{password})
+    </insert>
+
+    <!-- 更新客户信息 -->
+    <update id="updateUser" parameterType="com.example.experiment8.model.User">
+        update userinfo
+        set username=#{username},
+            password=#{password}
+        where id = #{id}
+    </update>
+
+    <!-- 删除客户信息 -->
+    <delete id="deleteUser" parameterType="Integer">
+        delete
+        from userinfo
+        where id = #{id}
+    </delete>
+
+</mapper>

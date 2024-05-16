@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.navigation.data-v-43beecc6 {
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  width: 92%;
+  justify-content: space-between;
+  margin: 100rpx 20rpx 30rpx 30rpx;
+  border: solid 2rpx #f2f2f2;
+  border-radius: 50rpx;
+  background-color: #fdf6ec;
+  padding: 16rpx 0;
+}
+.navigation .left.data-v-43beecc6 {
+  display: flex;
+  font-size: 20rpx;
+}
+.navigation .left .item.data-v-43beecc6 {
+  margin: 0 30rpx;
+}
+.navigation .left .item.car.data-v-43beecc6 {
+  text-align: center;
+  position: relative;
+}
+.navigation .left .item.car .car-num.data-v-43beecc6 {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+}
+.navigation .right.data-v-43beecc6 {
+  display: flex;
+  font-size: 28rpx;
+}
+.navigation .right .btn.data-v-43beecc6 {
+  line-height: 66rpx;
+  padding: 0 30rpx;
+  margin-right: 15rpx;
+  border-radius: 36rpx;
+  color: #ffffff;
+}
+.navigation .right .cart.data-v-43beecc6 {
+  background-color: #ed3f14;
+  margin-right: 30rpx;
+}
+.navigation .right .buy.data-v-43beecc6 {
+  background-color: #ff7900;
+}
+
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.u-wrap.data-v-43beecc6 {
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 35rpx;
+  margin: 18rpx;
+}
+.canteen-title.data-v-43beecc6 {
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.canteen-score.data-v-43beecc6 {
+  font-size: 25rpx;
+  color: #ff9900;
+}
+.u-search-box.data-v-43beecc6 {
+  padding: 18rpx 30rpx;
+}
+.u-menu-wrap.data-v-43beecc6 {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+.u-search-inner.data-v-43beecc6 {
+  background-color: #eaeaea;
+  border-radius: 100rpx;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 16rpx;
+}
+.u-search-text.data-v-43beecc6 {
+  font-size: 26rpx;
+  color: #909399;
+  margin-left: 10rpx;
+}
+.u-tab-view.data-v-43beecc6 {
+  width: 200rpx;
+  height: 100%;
+}
+.u-tab-item.data-v-43beecc6 {
+  height: 110rpx;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #444;
+  font-weight: 400;
+  line-height: 1;
+}
+.u-tab-item-active.data-v-43beecc6 {
+  position: relative;
+  color: #000;
+  font-size: 30rpx;
+  font-weight: 600;
+  background: #fdf6ec;
+}
+.u-tab-item-active.data-v-43beecc6::before {
+  content: "";
+  position: absolute;
+  border-left: 4px solid #ff9900;
+  height: 32rpx;
+  left: 0;
+  top: 39rpx;
+}
+.u-tab-view.data-v-43beecc6 {
+  height: 100%;
+}
+.right-box.data-v-43beecc6 {
+  background-color: #fafafa;
+}
+.page-view.data-v-43beecc6 {
+  padding: 16rpx;
+}
+.class-item.data-v-43beecc6 {
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  padding: 16rpx;
+  border-radius: 8rpx;
+}
+.class-item.data-v-43beecc6:last-child {
+  min-height: 100vh;
+}
+.item-title.data-v-43beecc6 {
+  font-size: 26rpx;
+  color: #303133;
+  font-weight: bold;
+}
+.item-menu-name.data-v-43beecc6 {
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #303133;
+  margin: 8rpx 5rpx;
+}
+.item-menu-sale.data-v-43beecc6 {
+  font-size: 25rpx;
+  color: #606266;
+  margin: 5rpx;
+}
+.item-menu-price.data-v-43beecc6 {
+  font-weight: bold;
+  font-size: 28rpx;
+  color: #fa3534;
+  margin: 5rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.item-menu-plus.data-v-43beecc6 {
+  width: 40rpx;
+  height: 40rpx;
+}
+.item-container.data-v-43beecc6 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumb-box.data-v-43beecc6 {
+  width: 100%;
+  display: flex;
+  align-items: left;
+  flex-direction: row;
+  margin-top: 20rpx;
+  flex-wrap: nowrap;
+}
+.item-menu-image.data-v-43beecc6 {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20rpx;
+}
+.swiper-box.data-v-43beecc6 {
+  flex: 1;
+}
+.swiper-item.data-v-43beecc6 {
+  height: 100%;
+}
+.comment-card.data-v-43beecc6 {
+  background-color: #fff;
+}
+

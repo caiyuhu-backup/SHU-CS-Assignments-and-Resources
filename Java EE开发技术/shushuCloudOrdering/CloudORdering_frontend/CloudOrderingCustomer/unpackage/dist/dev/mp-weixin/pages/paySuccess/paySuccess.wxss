@@ -1,0 +1,34 @@
+
+page {
+	background-color: #2ab952;
+}
+.pay-card {
+	width: 92%;
+	height: 100%;
+	background-color: #ffffff;
+	border-radius: 35rpx;
+	margin: 30rpx;
+	margin-top: 120rpx;
+	padding: 10rpx;
+}
+.pay-time {
+	color: #2ab952;
+	font-weight: bold;
+	font-size: 45rpx;
+}
+.pay-address {
+	color: #f29100;
+	font-weight: bold;
+	font-size: 45rpx;
+}
+.pay-status {
+	color: #dd6161;
+	font-weight: bold;
+	font-size: 50rpx;
+}
+.pay-status2 {
+	color: #909399;
+	font-weight: bold;
+	font-size: 50rpx;
+}
+

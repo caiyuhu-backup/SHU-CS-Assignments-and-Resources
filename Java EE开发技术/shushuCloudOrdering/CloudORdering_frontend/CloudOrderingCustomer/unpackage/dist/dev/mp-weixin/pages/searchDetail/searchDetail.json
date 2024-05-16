@@ -1,0 +1,20 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "searchDetail-u-waterfall-left": "/pages/searchDetail/searchDetail-u-waterfall-left",
+    "searchDetail-u-waterfall-right": "/pages/searchDetail/searchDetail-u-waterfall-right",
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-dropdown": "/uview-ui/components/u-dropdown/u-dropdown",
+    "u-dropdown-item": "/uview-ui/components/u-dropdown-item/u-dropdown-item",
+    "u-waterfall": "/uview-ui/components/u-waterfall/u-waterfall",
+    "u-lazy-load": "/uview-ui/components/u-lazy-load/u-lazy-load",
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "u-count-to": "/uview-ui/components/u-count-to/u-count-to",
+    "u-tag": "/uview-ui/components/u-tag/u-tag",
+    "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore",
+    "u-back-top": "/uview-ui/components/u-back-top/u-back-top"
+  }
+}

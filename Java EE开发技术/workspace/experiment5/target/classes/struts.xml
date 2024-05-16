@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.i18n.encoding" value="gbk"></constant>
+    <package name="StrutsLogin" extends="struts-default">
+        <action name="register" class="shu.silence.action.RegisterAction">
+            <result name="success">/register_success.jsp</result>
+            <result name="input">/register.jsp</result>
+        </action>
+
+        <action name="login" class="shu.silence.action.LoginAction">
+            <result name="success" type="redirect">/login_success.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+    </package>
+</struts>

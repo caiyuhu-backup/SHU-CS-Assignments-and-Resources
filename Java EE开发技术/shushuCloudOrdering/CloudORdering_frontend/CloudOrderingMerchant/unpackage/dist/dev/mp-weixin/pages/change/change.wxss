@@ -1,0 +1,42 @@
+
+.center-card.data-v-a4683074 {
+	height: 700rpx;
+	background-color: #ffffff;
+	border-radius: 35rpx;
+	margin: 18rpx;
+	padding: 10rpx;
+}
+.wrap.data-v-a4683074 {
+	padding: 24rpx;
+}
+.slot-btn.data-v-a4683074 {
+	width: 341rpx;
+	height: 240rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(244, 245, 246);
+	border-radius: 10rpx;
+}
+.slot-btn__hover.data-v-a4683074 {
+	background-color: rgb(235, 236, 238);
+}
+.pre-box.data-v-a4683074 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.pre-item.data-v-a4683074 {
+	flex: 0 0 48.5%;
+	border-radius: 10rpx;
+	height: 240rpx;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20rpx;
+}
+.pre-item-image.data-v-a4683074 {
+	width: 100%;
+	height: 240rpx;
+}
+

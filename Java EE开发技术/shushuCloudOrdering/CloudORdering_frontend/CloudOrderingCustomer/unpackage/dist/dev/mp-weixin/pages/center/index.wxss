@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.center.data-v-0f3320de {
+  margin-top: 18rpx;
+}
+.center-button.data-v-0f3320de {
+  border-radius: 50rpx;
+  width: 90rpx;
+}
+.center-card.data-v-0f3320de {
+  width: 92%;
+  height: 330rpx;
+  background-color: #ffffff;
+  border-radius: 35rpx;
+  margin: 30rpx;
+  padding: 10rpx;
+}
+
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+image.data-v-0f3320de {
+  width: 150rpx;
+  flex: 0 0 120rpx;
+  height: 200rpx;
+  border-radius: 8rpx;
+}
+.u-body-item-title.data-v-0f3320de {
+  font-weight: bold;
+}
+.headBg.data-v-0f3320de {
+  width: 150rpx;
+  background: #fdf6ec;
+}
+

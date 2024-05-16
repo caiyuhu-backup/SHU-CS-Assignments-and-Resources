@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app >
+	<servlet>
+		<servlet-name>mainServlet</servlet-name>
+    		<servlet-class>servlet.MainServlet</servlet-class>
+ 	</servlet>
+ 	  	<servlet-mapping>
+    		<servlet-name>mainServlet</servlet-name>
+    		<url-pattern>/mainServlet</url-pattern>
+  	</servlet-mapping>
+  	<servlet>
+    		<servlet-name>addServlet</servlet-name>
+    		<servlet-class>servlet.AddServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    		<servlet-name>addServlet</servlet-name>
+    		<url-pattern>/addServlet</url-pattern>
+  	</servlet-mapping>
+  	  	<servlet>
+    		<servlet-name>registerServlet</servlet-name>
+    		<servlet-class>servlet.RegisterServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    		<servlet-name>registerServlet</servlet-name>
+    		<url-pattern>/registerServlet</url-pattern>
+  	</servlet-mapping>
+</web-app>

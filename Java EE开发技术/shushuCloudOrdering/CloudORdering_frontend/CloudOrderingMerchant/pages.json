@@ -1,0 +1,80 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ 
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "商家首页",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		}, {
+			"path": "pages/orders/orders",
+			"style": {
+				"navigationBarTitleText": "所有订单",
+				"enablePullDownRefresh": true
+			}
+		}
+        ,{
+            "path" : "pages/change/change",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            } 
+        }
+        ,{
+            "path" : "pages/upProduct/upProduct",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }  
+        }
+        ,{
+            "path" : "pages/productList/productList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的商店",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uView",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#232629",
+		"selectedColor": "#232629",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabBarImage/index.png",
+			"selectedIconPath": "static/tabBarImage/index-selected.png",
+			"text": "商家首页"
+		},{
+			"pagePath": "pages/productList/productList",
+			"iconPath": "static/tabBarImage/center.png",
+			"selectedIconPath": "static/tabBarImage/center-selected.png",
+			"text": "商品列表"
+		},{
+			"pagePath": "pages/orders/orders",
+			"iconPath": "static/tabBarImage/order.png",
+			"selectedIconPath": "static/tabBarImage/order-selected.png",
+			"text": "所有订单"
+		}]
+	}
+}

@@ -1,0 +1,215 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* page不能写带scope的style标签中，否则无效 */
+page {
+	background-color: #f4f4f5;
+}
+
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.demo-warter.data-v-3b5798a6 {
+  border-radius: 8px;
+  margin: 5px;
+  background-color: #ffffff;
+  padding: 8px;
+  position: relative;
+}
+.demo-image.data-v-3b5798a6 {
+  width: 100%;
+  border-radius: 4px;
+}
+.demo-price.data-v-3b5798a6 {
+  font-size: 28rpx;
+  color: #fa3534;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.demo-shop.data-v-3b5798a6 {
+  font-size: 30rpx;
+  color: #303133;
+  font-weight: bold;
+  margin-top: 5px;
+}
+

@@ -1,0 +1,22 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+    "u-modal": "/uview-ui/components/u-modal/u-modal",
+    "u-top-tips": "/uview-ui/components/u-top-tips/u-top-tips",
+    "u-image": "/uview-ui/components/u-image/u-image",
+    "uni-title": "/uni_modules/uni-title/components/uni-title/uni-title",
+    "u-row": "/uview-ui/components/u-row/u-row",
+    "u-col": "/uview-ui/components/u-col/u-col",
+    "u-form": "/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uview-ui/components/u-form-item/u-form-item",
+    "u-field": "/uview-ui/components/u-field/u-field",
+    "u-verification-code": "/uview-ui/components/u-verification-code/u-verification-code",
+    "u-button": "/uview-ui/components/u-button/u-button",
+    "u-message-input": "/uview-ui/components/u-message-input/u-message-input",
+    "u-toast": "/uview-ui/components/u-toast/u-toast",
+    "u-keyboard": "/uview-ui/components/u-keyboard/u-keyboard"
+  }
+}

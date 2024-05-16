@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.u-wrap.data-v-1f293d3c {
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+}
+.u-menu-wrap.data-v-1f293d3c {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+.u-search-inner.data-v-1f293d3c {
+  background-color: #eaeaea;
+  border-radius: 100rpx;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 16rpx;
+}
+.u-search-text.data-v-1f293d3c {
+  font-size: 26rpx;
+  color: #909399;
+  margin-left: 10rpx;
+}
+.u-tab-view.data-v-1f293d3c {
+  width: 200rpx;
+  height: 100%;
+}
+.u-tab-item.data-v-1f293d3c {
+  height: 110rpx;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #444;
+  font-weight: 400;
+  line-height: 1;
+}
+.u-tab-item-active.data-v-1f293d3c {
+  position: relative;
+  color: #000;
+  font-size: 30rpx;
+  font-weight: 600;
+  background: #fdf6ec;
+}
+.u-tab-item-active.data-v-1f293d3c::before {
+  content: "";
+  position: absolute;
+  border-left: 4px solid #ff9900;
+  height: 32rpx;
+  left: 0;
+  top: 39rpx;
+}
+.u-tab-view.data-v-1f293d3c {
+  height: 100%;
+}
+.right-box.data-v-1f293d3c {
+  background-color: #fafafa;
+}
+.page-view.data-v-1f293d3c {
+  padding: 16rpx;
+}
+.class-item.data-v-1f293d3c {
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  padding: 16rpx;
+  border-radius: 8rpx;
+}
+.class-item.data-v-1f293d3c:last-child {
+  min-height: 100vh;
+}
+.item-title.data-v-1f293d3c {
+  font-size: 36rpx;
+  color: #ff9901;
+  font-weight: bold;
+}
+.item-menu-name.data-v-1f293d3c {
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #303133;
+  margin: 8rpx 5rpx;
+}
+.item-menu-sale.data-v-1f293d3c {
+  font-size: 25rpx;
+  color: #606266;
+  margin: 5rpx;
+}
+.item-menu-price.data-v-1f293d3c {
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #fa3534;
+  margin: 5rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.item-menu-plus.data-v-1f293d3c {
+  width: 40rpx;
+  height: 40rpx;
+}
+.item-container.data-v-1f293d3c {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumb-box.data-v-1f293d3c {
+  width: 100%;
+  display: flex;
+  align-items: left;
+  flex-direction: row;
+  margin-top: 20rpx;
+  flex-wrap: nowrap;
+}
+.item-menu-image.data-v-1f293d3c {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20rpx;
+  margin-right: 10rpx;
+}
+.center-card.data-v-1f293d3c {
+  height: 900rpx;
+  background-color: #ffffff;
+  border-radius: 35rpx;
+  margin: 18rpx;
+  padding: 10rpx;
+}
+.wrap.data-v-1f293d3c {
+  padding: 24rpx;
+}
+.slot-btn.data-v-1f293d3c {
+  width: 341rpx;
+  height: 240rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f5f6;
+  border-radius: 10rpx;
+}
+.slot-btn__hover.data-v-1f293d3c {
+  background-color: #ebecee;
+}
+

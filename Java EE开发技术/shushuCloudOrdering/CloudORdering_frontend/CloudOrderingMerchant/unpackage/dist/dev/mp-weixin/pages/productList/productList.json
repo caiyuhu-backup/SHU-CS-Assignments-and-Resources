@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "我的商店",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-count-to": "/uview-ui/components/u-count-to/u-count-to",
+    "u-popup": "/uview-ui/components/u-popup/u-popup",
+    "u-form": "/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uview-ui/components/u-form-item/u-form-item",
+    "u-input": "/uview-ui/components/u-input/u-input",
+    "u-number-box": "/uview-ui/components/u-number-box/u-number-box",
+    "u-switch": "/uview-ui/components/u-switch/u-switch",
+    "u-upload": "/uview-ui/components/u-upload/u-upload",
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "u-button": "/uview-ui/components/u-button/u-button",
+    "u-modal": "/uview-ui/components/u-modal/u-modal",
+    "u-circle-progress": "/uview-ui/components/u-circle-progress/u-circle-progress"
+  }
+}

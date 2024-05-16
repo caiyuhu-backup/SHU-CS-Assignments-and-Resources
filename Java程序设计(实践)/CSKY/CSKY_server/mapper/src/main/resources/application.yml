@@ -1,0 +1,11 @@
+mybatis-plus:
+  # 指定 mybatis 自定义的接口配置文件的路径
+  mapper-locations: classpath:mapper/*.xml
+  # 配置 mybatis 扫描类的别名，这样指定对应的类时，只需要写类名即可
+  type-aliases-package: shu.java.csky.entity, shu.java.csky.vo
+  configuration:
+    # 开启驼峰映射
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      id-type: auto

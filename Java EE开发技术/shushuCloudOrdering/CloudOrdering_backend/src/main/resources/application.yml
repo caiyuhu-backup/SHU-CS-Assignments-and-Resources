@@ -1,0 +1,43 @@
+server:
+  port: 8849
+  servlet:
+    context-path: /cloudorder
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/CloudOrdering
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    #    date-format: yyyy-MM-dd HH:MM
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    host: localhost
+    port: 6379
+    password: root
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+mybatis-plus:
+  # 指定 mybatis 自定义的接口配置文件的路径
+  mapper-locations: classpath:mapper/*.xml
+  # 配置 mybatis 扫描类的别名，这样指定对应的类时，只需要写类名即可
+  type-aliases-package: com.shu.cloudordering.model
+  configuration:
+    # 开启驼峰映射
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      id-type: auto
+
+logging:
+  level:
+    com.shu: debug
+  pattern:
+    dateformat: mm:ss.SSS

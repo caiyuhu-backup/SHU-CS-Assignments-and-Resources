@@ -1,0 +1,330 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* page不能写带scope的style标签中，否则无效 */
+page {
+	background-color: #f4f4f5;
+}
+
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.u-row.data-v-57280228 {
+  margin: 18rpx 0;
+}
+.vendor-name.data-v-57280228 {
+  font-size: 50rpx;
+  color: #303133;
+  font-weight: bold;
+}
+.vendor-score.data-v-57280228 {
+  color: #f29100;
+}
+.center-card.data-v-57280228 {
+  width: 100%;
+  height: 300rpx;
+  background-color: #ffffff;
+  border-radius: 35rpx;
+  margin-bottom: 30rpx;
+  padding: 10rpx;
+}
+.u-progress-content.data-v-57280228 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.u-progress-dot.data-v-57280228 {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: #fb9126;
+}
+.u-progress-info.data-v-57280228 {
+  font-size: 28rpx;
+  padding-left: 16rpx;
+  letter-spacing: 2rpx;
+}
+

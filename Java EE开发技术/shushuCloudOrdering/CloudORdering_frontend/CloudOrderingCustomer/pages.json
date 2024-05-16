@@ -1,0 +1,118 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ 
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "用户首页",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/center/index",
+			"style": {
+				"navigationBarTitleText": "用户中心",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		}, {
+			"path": "pages/orders/orders",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		}
+	    ,{
+            "path" : "pages/searchDetail/searchDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationStyle": "custom" ,// 隐藏系统导航栏
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/vendor/vendor",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationStyle": "custom" ,// 隐藏系统导航栏
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/submitOrder/submitOrder",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "确认订单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/paySuccess/paySuccess",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": true,
+				"navigationStyle": "custom"// 隐藏系统导航栏
+            }
+        }
+        ,{
+            "path" : "pages/userComment/userComment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"// 隐藏系统导航栏
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uView",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#232629",
+		"selectedColor": "#232629",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabBarImage/index.png",
+			"selectedIconPath": "static/tabBarImage/index-selected.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/orders/orders",
+			"iconPath": "static/tabBarImage/order.png",
+			"selectedIconPath": "static/tabBarImage/order-selected.png",
+			"text": "订单"
+		}, {
+			"pagePath": "pages/center/index",
+			"iconPath": "static/tabBarImage/center.png",
+			"selectedIconPath": "static/tabBarImage/center-selected.png",
+			"text": "我的"
+		}]
+	}
+}

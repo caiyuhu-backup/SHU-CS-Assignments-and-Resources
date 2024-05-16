@@ -1,0 +1,17 @@
+# Ignore all CSV files 作业中的数据，忽略上传，因此不一定能运行
+*.csv 
+
+# Ignore all MP4 files 网课大作业有些需要录视频，包含真人出镜/配音，相信大家也不感兴趣 :-)
+*.mp4
+
+# Ignore all node_modules directories
+node_modules/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore VSCode project files
+.vscode/

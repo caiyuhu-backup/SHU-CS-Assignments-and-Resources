@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/center/index",
+    "pages/login/login",
+    "pages/orders/orders",
+    "pages/search/search",
+    "pages/searchDetail/searchDetail",
+    "pages/vendor/vendor",
+    "pages/submitOrder/submitOrder",
+    "pages/paySuccess/paySuccess",
+    "pages/userComment/userComment"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uView",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#232629",
+    "selectedColor": "#232629",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabBarImage/index.png",
+        "selectedIconPath": "static/tabBarImage/index-selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "iconPath": "static/tabBarImage/order.png",
+        "selectedIconPath": "static/tabBarImage/order-selected.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/center/index",
+        "iconPath": "static/tabBarImage/center.png",
+        "selectedIconPath": "static/tabBarImage/center-selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

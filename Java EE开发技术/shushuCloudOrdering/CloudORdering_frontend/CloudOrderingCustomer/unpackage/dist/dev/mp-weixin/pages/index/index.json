@@ -1,0 +1,23 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "index-u-waterfall-left": "/pages/index/index-u-waterfall-left",
+    "index-u-waterfall-right": "/pages/index/index-u-waterfall-right",
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-button": "/uview-ui/components/u-button/u-button",
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "u-notice-bar": "/uview-ui/components/u-notice-bar/u-notice-bar",
+    "u-grid": "/uview-ui/components/u-grid/u-grid",
+    "u-grid-item": "/uview-ui/components/u-grid-item/u-grid-item",
+    "u-subsection": "/uview-ui/components/u-subsection/u-subsection",
+    "u-toast": "/uview-ui/components/u-toast/u-toast",
+    "u-waterfall": "/uview-ui/components/u-waterfall/u-waterfall",
+    "u-lazy-load": "/uview-ui/components/u-lazy-load/u-lazy-load",
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "u-count-to": "/uview-ui/components/u-count-to/u-count-to",
+    "u-tag": "/uview-ui/components/u-tag/u-tag",
+    "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore",
+    "u-back-top": "/uview-ui/components/u-back-top/u-back-top"
+  }
+}
