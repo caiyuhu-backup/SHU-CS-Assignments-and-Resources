@@ -1,0 +1,55 @@
+Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Full Version
+39
+2100
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+test
+# storage
+db|test.(0).cnf
+db|test.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+test.vhd
+c0d6634a0bcd3fd44ab5d8f7db7b11
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# user_parameter {
+sys_clk_fre_value
+50000000
+PARAMETER_DEC
+DEF
+div_clk_fre_value
+25000000
+PARAMETER_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# end
+# complete
+

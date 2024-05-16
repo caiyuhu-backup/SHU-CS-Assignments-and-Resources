@@ -1,0 +1,299 @@
+Analysis & Synthesis report for test
+Sun Jul 03 20:42:59 2022
+Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Source assignments for Top-level Entity: |test
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |test
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                ;
++-----------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Jul 03 20:42:59 2022         ;
+; Quartus II Version          ; 6.0 Build 202 06/20/2006 SP 1 SJ Full Version ;
+; Revision Name               ; test                                          ;
+; Top-level Entity Name       ; test                                          ;
+; Family                      ; Stratix                                       ;
+; Total logic elements        ; 183                                           ;
+; Total pins                  ; 69                                            ;
+; Total virtual pins          ; 0                                             ;
+; Total memory bits           ; 0                                             ;
+; DSP block 9-bit elements    ; 0                                             ;
+; Total PLLs                  ; 0                                             ;
+; Total DLLs                  ; 0                                             ;
++-----------------------------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                             ; Setting            ; Default Value      ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                              ; test               ; test               ;
+; Family name                                                        ; Stratix            ; Stratix            ;
+; Use smart compilation                                              ; Off                ; Off                ;
+; Restructure Multiplexers                                           ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                ; Off                ; Off                ;
+; Preserve fewer node names                                          ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                          ; Off                ; Off                ;
+; Verilog Version                                                    ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                       ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                           ; Auto               ; Auto               ;
+; Extract Verilog State Machines                                     ; On                 ; On                 ;
+; Extract VHDL State Machines                                        ; On                 ; On                 ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On                 ; On                 ;
+; DSP Block Balancing                                                ; Auto               ; Auto               ;
+; Maximum DSP Block Usage                                            ; Unlimited          ; Unlimited          ;
+; NOT Gate Push-Back                                                 ; On                 ; On                 ;
+; Power-Up Don't Care                                                ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                       ; Off                ; Off                ;
+; Remove Duplicate Registers                                         ; On                 ; On                 ;
+; Ignore CARRY Buffers                                               ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                             ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                              ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore LCELL Buffers                                               ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                     ; Off                ; Off                ;
+; Optimization Technique -- Stratix/Stratix GX                       ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70                 ; 70                 ;
+; Auto Carry Chains                                                  ; On                 ; On                 ;
+; Auto Open-Drain Pins                                               ; On                 ; On                 ;
+; Remove Duplicate Logic                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off                ; Off                ;
+; Perform gate-level register retiming                               ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On                 ; On                 ;
+; Auto ROM Replacement                                               ; On                 ; On                 ;
+; Auto RAM Replacement                                               ; On                 ; On                 ;
+; Auto DSP Block Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                                    ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                      ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                  ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                             ; Off                ; Off                ;
+; Auto RAM Block Balancing                                           ; On                 ; On                 ;
+; Auto Resource Sharing                                              ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                      ; Off                ; Off                ;
+; Maximum Number of M512 Memory Blocks                               ; Unlimited          ; Unlimited          ;
+; Maximum Number of M4K Memory Blocks                                ; Unlimited          ; Unlimited          ;
+; Maximum Number of M-RAM Memory Blocks                              ; Unlimited          ; Unlimited          ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                 ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                   ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                       ; Normal compilation ; Normal compilation ;
+; HDL message level                                                  ; Level2             ; Level2             ;
++--------------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                          ;
++----------------------------------+-----------------+-----------------+------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path             ;
++----------------------------------+-----------------+-----------------+------------------------------------------+
+; test.vhd                         ; yes             ; User VHDL File  ; C:/Users/Silence/Desktop/1/test/test.vhd ;
++----------------------------------+-----------------+-----------------+------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Total logic elements                        ; 183         ;
+;     -- Combinational with no register       ; 133         ;
+;     -- Register only                        ; 41          ;
+;     -- Combinational with a register        ; 9           ;
+;                                             ;             ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 57          ;
+;     -- 3 input functions                    ; 19          ;
+;     -- 2 input functions                    ; 63          ;
+;     -- 1 input functions                    ; 2           ;
+;     -- 0 input functions                    ; 1           ;
+;         -- Combinational cells for routing  ; 0           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 149         ;
+;     -- arithmetic mode                      ; 34          ;
+;     -- qfbk mode                            ; 0           ;
+;     -- register cascade mode                ; 0           ;
+;     -- synchronous clear/load mode          ; 0           ;
+;     -- asynchronous clear/load mode         ; 49          ;
+;                                             ;             ;
+; Total registers                             ; 50          ;
+; Total logic cells in carry chains           ; 36          ;
+; I/O pins                                    ; 69          ;
+; Maximum fan-out node                        ; i_sys_clear ;
+; Maximum fan-out                             ; 43          ;
+; Total fan-out                               ; 621         ;
+; Average fan-out                             ; 2.46        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
++----------------------------+-------------+--------------+-------------+-------+------+--------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; M512s ; M4Ks ; M-RAMs ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ;
++----------------------------+-------------+--------------+-------------+-------+------+--------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+
+; |test                      ; 183 (183)   ; 50           ; 0           ; 0     ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 69   ; 0            ; 133 (133)    ; 41 (41)           ; 9 (9)            ; 36 (36)         ; 0 (0)      ; |test               ;
++----------------------------+-------------+--------------+-------------+-------+------+--------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 50    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Asynchronous Load  ; 16    ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |test|r_min_shiwei[2]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |test|r_hour_ge_wei[3]     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |test|r_min_ge_wei[0]      ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |test|comb~6               ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |test|comb~52              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------+
+; Source assignments for Top-level Entity: |test ;
++----------------+-------+------+----------------+
+; Assignment     ; Value ; From ; To             ;
++----------------+-------+------+----------------+
+; POWER_UP_LEVEL ; Low   ; -    ; is_ended       ;
++----------------+-------+------+----------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |test ;
++-------------------+----------+---------------------------------------+
+; Parameter Name    ; Value    ; Type                                  ;
++-------------------+----------+---------------------------------------+
+; sys_clk_fre_value ; 50000000 ; Integer                               ;
+; div_clk_fre_value ; 25000000 ; Integer                               ;
++-------------------+----------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Full Version
+    Info: Processing started: Sun Jul 03 20:42:58 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
+Info: Found 2 design units, including 1 entities, in source file test.vhd
+    Info: Found design unit 1: test-behave
+    Info: Found entity 1: test
+Info: Elaborating entity "test" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at test.vhd(61): object "init_mode_shiwei" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at test.vhd(153): signal "init_min_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(154): signal "init_min_shiwei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(155): signal "init_hour_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(156): signal "init_hour_shiwei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(194): signal "r_min_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(195): signal "r_min_shiwei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(196): signal "r_hour_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(197): signal "r_hour_shiwei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(203): signal "init_mode_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(219): signal "r_min_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(234): signal "r_guan_min_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(239): signal "r_min_shiwei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(250): signal "r_guan_min_shiwei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(255): signal "r_hour_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(270): signal "r_guan_hour_ge_wei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(275): signal "r_hour_shiwei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at test.vhd(286): signal "r_guan_hour_shiwei" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10631): VHDL Process Statement warning at test.vhd(88): inferring latch(es) for signal or variable "init_min_ge_wei", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at test.vhd(88): inferring latch(es) for signal or variable "init_min_shiwei", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at test.vhd(88): inferring latch(es) for signal or variable "init_hour_ge_wei", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at test.vhd(88): inferring latch(es) for signal or variable "init_hour_shiwei", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at test.vhd(88): inferring latch(es) for signal or variable "init_mode_ge_wei", which holds its previous value in one or more paths through the process
+Warning (10034): Output port "o_zhengdianbaoshi" at test.vhd(40) has no driver
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_mode_ge_wei[0]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_mode_ge_wei[1]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_mode_ge_wei[2]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_mode_ge_wei[3]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_hour_shiwei[0]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_hour_shiwei[1]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_hour_shiwei[2]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_hour_shiwei[3]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_hour_ge_wei[0]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_hour_ge_wei[1]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_hour_ge_wei[2]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_hour_ge_wei[3]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_min_shiwei[0]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_min_shiwei[1]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_min_shiwei[2]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_min_shiwei[3]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_min_ge_wei[0]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_min_ge_wei[1]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_min_ge_wei[2]"
+Info (10041): Verilog HDL or VHDL info at test.vhd(88): inferred latch for "init_min_ge_wei[3]"
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "o_guan_mode_shiwei[0]" stuck at GND
+    Warning: Pin "o_guan_mode_shiwei[1]" stuck at GND
+    Warning: Pin "o_guan_mode_shiwei[2]" stuck at GND
+    Warning: Pin "o_guan_mode_shiwei[3]" stuck at GND
+    Warning: Pin "o_guan_mode_shiwei[4]" stuck at GND
+    Warning: Pin "o_guan_mode_shiwei[5]" stuck at GND
+    Warning: Pin "o_guan_mode_shiwei[6]" stuck at VCC
+    Warning: Pin "o_zhengdianbaoshi" stuck at GND
+Info: Implemented 252 device resources after synthesis - the final resource count might be different
+    Info: Implemented 9 input pins
+    Info: Implemented 60 output pins
+    Info: Implemented 183 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Processing ended: Sun Jul 03 20:42:59 2022
+    Info: Elapsed time: 00:00:01
+
+

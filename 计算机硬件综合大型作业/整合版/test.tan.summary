@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.009 ns
+From           : i_sys_add_time
+To             : r_min_ge_wei[2]
+From Clock     : --
+To Clock       : i_sys_clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.881 ns
+From           : r_hour_shiwei[0]
+To             : o_guan_hour_shiwei[2]
+From Clock     : i_sys_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.262 ns
+From           : i_sys_mode[0]
+To             : o_guan_mode_ge_wei[6]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.749 ns
+From           : i_sys_clear
+To             : is_ended
+From Clock     : --
+To Clock       : i_sys_clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'i_sys_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 250.56 MHz ( period = 3.991 ns )
+From           : r_min_shiwei[2]
+To             : r_hour_ge_wei[1]
+From Clock     : i_sys_clk
+To Clock       : i_sys_clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,258 @@
+%!TEX program = xelatex
+% 完整编译: xelatex -> biber/bibtex -> xelatex -> xelatex
+\documentclass[lang=cn,a4paper,chinesefont=founder,bibend=bibtex]{shu-lab-report}
+% * 更多配置选项
+% \documentclass[lang=cn,a4paper,zihao=-4,chinesefont=founder,bibend=bibtex]{elegantpaper}
+
+% 本文档命令
+\usepackage{array}
+
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+\renewcommand{\lstlistingname}{代码}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The Cover Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+
+~\\
+
+\vspace{1.5cm}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=10cm]{image/shulogo.png}
+\end{figure}
+
+\centerline{\large{\textbf{SHANGHAI  UNIVERSITY}}}
+
+\vspace{8mm}
+
+\centerline{\kaishu\Huge{\textbf{实验\hspace*{1em} 多核环境下OpenMP并行编程}}}
+
+\vspace{16mm}
+
+\begin{center}
+  \renewcommand\arraystretch{2}
+  \begin{tabular}{r c}
+    \makebox[8em][s]{\LARGE{组号}}   & \LARGE{5}           \\         \cmidrule(l){2-2}
+    \makebox[8em][s]{\LARGE{学号姓名}} & \LARGE{20121034胡才郁} \\  \cmidrule(l){2-2}
+    \makebox[8em][s]{\LARGE{实验序号}} & \LARGE{3}           \\            \cmidrule(l){2-2}
+    \makebox[8em][s]{\LARGE{日期}}   & \LARGE{2023年5月9日}   \\ \cmidrule(l){2-2}
+  \end{tabular}
+\end{center}
+
+\vspace{16mm}
+
+% Please add the following required packages to your document preamble:
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+{\Large
+  \begin{longtable}[c]{|c|c|}
+    \hline
+    \textbf{评分内容}                 & \textbf{评分} \\ \hline
+    \endhead
+    %
+    内容完整，有实验目的、步骤、分析、总结           &             \\ \hline
+    内容质量，表述清楚正确，条理清晰，分析总结到位       &             \\ \hline
+    格式规范，标题、段落、公式、图表、代码符合专业文献出版要求 &             \\ \hline
+    综合得分                          &             \\ \hline
+  \end{longtable}
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tcolorbox}[title=要求1]
+  OpenMP介绍
+\end{tcolorbox}
+
+OpenMP的主要目标是使并行编程变得容易且高效，通过在代码中添加简单的编译指令来进行并行化。这些指令使用特殊的语法标记来标识哪些代码段可以并行执行，因此程序员可以针对性地对代码进行并行化，而不需要全面地重构整个应用程序。
+
+本次实验在本人虚拟机上的Ubuntu操作系统上完成，具体而言，OpenMp的安装可以通过以下步骤进行：
+
+\begin{enumerate}
+  \item 输入以下命令以安装OpenMP库：
+        \begin{lstlisting}[language=bash]
+  sudo apt-get install libomp-dev
+  \end{lstlisting}
+
+  \item 安装成功后，在gcc编译时加入\codeinline{-fopenmp}参数即可使用OpenMP库。
+
+\end{enumerate}
+
+
+
+\begin{tcolorbox}[title=要求2]
+  创建多线程，输出线程号和线程数。
+\end{tcolorbox}
+
+OpenMP提供\codeinline{omp\_set\_num\_threads()}函数可以设置程序的线程数，而\codeinline{omp\_get\_thread\_num()}函数可以获取当前线程的编号，\codeinline{omp\_get\_num\_threads()}函数可以获取当前线程的总数。通过这些函数，可以很方便地实现多线程的创建。在下面的代码中，通过tid来获取线程编号，并且指定tid为0的线程输出线程总数。具体代码如下：
+
+\begin{lstlisting}[language=c]
+#include <omp.h>
+#include <stdio.h>
+int main()
+{
+    int nthreads, tid;
+    omp_set_num_threads(16);
+#   pragma omp parallel private(nthreads, tid)
+    {
+        tid = omp_get_thread_num();
+        printf("Hello World from OMP thread %d\n", tid);
+        if (tid == 0)
+        {
+            nthreads = omp_get_num_threads();
+            printf("Number of threads is %d\n", nthreads);
+        }
+    }
+}
+\end{lstlisting}
+
+编译运行结果如\figref{fig:1}所示, 可以观察到，在给定16个线程的情况下，线程编号从0到15，且线程0输出了线程总数。并且输出的顺序并非按照线程编号的顺序，这是因为线程的创建和执行是并行的，因此输出的顺序是不确定的。
+
+\newpage
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.3\textwidth]{image/1.jpg}
+  \caption{多线程输出线程号和线程数}
+  \label{fig:1}
+\end{figure}
+
+
+\begin{tcolorbox}[title=要求3]
+  学习for多线程并行
+\end{tcolorbox}
+
+下面的代码给出了使用for多线程并行计算数组元素和的简单实现，利用\codeinline{reduction}规约完成，更复杂的矩阵乘法实现在后面在报告后面的部分给出。
+
+首先定义一个数组a，包含100个元素，然后使用循环将数组中的元素依次初始化为1，2，3，...，100。接下来使用OpenMP并行计算数组元素的总和。使用\codeinline{\#pragma omp parallel for}指令将for循环变成一个并行计算的任务，其中第二个参数\codeinline{reduction(+:sum)}告诉OpenMP对sum变量进行求和操作，并使用重复加法算法保证线程安全。
+
+其中对于线程安全的实现主要通过\codeinline{reduction}完成，它可以帮助我们实现并行任务中的归约操作。在并行任务中，某些变量需要被多个线程访问和修改，这时就需要对这些变量进行归约，即将多个线程对变量的计算结果合并成一个最终结果。
+
+\begin{lstlisting}[language=c]
+#include <stdio.h>
+#include <omp.h>
+
+int main() {
+    int i, n = 100, sum = 0;
+    int a[n];
+    // 初始化数组
+    for (i = 0; i < n; i++) {
+        a[i] = i + 1;
+    }
+    // 并行计算数组元素的总和
+    #pragma omp parallel for reduction(+:sum)
+    for (i = 0; i < n; i++) {
+        sum += a[i];
+    }
+    printf("The sum is: %d\n", sum);
+    return 0;
+}
+\end{lstlisting}
+
+结果如\figref{fig:4}所示，正确的求出了1-100的和，即5050，说明了\codeinline{reduction}规约的正确性。
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.3\textwidth]{image/4.jpg}
+  \caption{for多线程并行计算数组元素和}
+  \label{fig:4}
+\end{figure}
+
+\begin{tcolorbox}[title=要求4]
+  学习while多线程并行，实现全局共享变量存取
+\end{tcolorbox}
+
+如下，实现了使用while多线程并行。下面的代码中的全局共享变量是 i，该变量被所有线程共享，并且在 while 循环中被多个线程同时访问和修改。
+
+每个线程在访问并修改 i 变量之前必须确保其他线程不同时访问和修改相同的变量 i 。
+
+使用了 \codeinline{\#pragma omp atomic} 将 i 变量的递增操作转换为原子操作。这将保证 i 变量被原子地递增，从而避免多个线程同时读取和增加 i 变量的值所带来的问题。最后，在同步点处同步 i 的值，使用了 \codeinline{\#pragma omp flush(i)} 指令，它确保对 i 进行可见性刷新，这个过程确保任何一个线程都可以读取到前一个线程写入的新值。
+
+\begin{lstlisting}[language=c]
+#pragma omp parallel private(tid)
+{
+  tid = omp_get_thread_num();
+  #pragma omp critical
+  printf("Thread %d is running\n",tid);
+
+  #pragma omp barrier
+
+  #pragma omp while
+  while(i < n) 
+  {
+      #pragma omp atomic
+      i++;
+      #pragma omp critical
+      printf("Thread %d says i=%d\n",tid,i);
+
+      #pragma omp flush(i)
+  }
+}
+\end{lstlisting}
+
+程序运行结果如\figref{fig:2}所示。可以看出，完成了while在多线程并发的使用，输出时，线程的顺序是不确定的，但是输出的i的值是递增的，这说明了while的多线程并行是成功的。
+
+\newpage
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.3\textwidth]{image/2.jpg}
+  \caption{while多线程并行}
+  \label{fig:2}
+\end{figure}
+
+\begin{tcolorbox}[title=要求5]
+  编程实现大规模向量的并行计算
+\end{tcolorbox}
+
+以下代码为使用OpenMP实现矩阵之间乘法的核心代码块。调用了\codeinline{omp\_get\_wtime()}包围了核心代码块，以便计算程序运行时间。在核心代码块中，使用了\codeinline{omp\_parallel}和\codeinline{omp\_for}来实现多线程并行，其中\codeinline{omp\_parallel}用于创建线程，\codeinline{omp\_for}用于指定需要并行的代码块。
+
+在\codeinline{omp\_for}中，通过\codeinline{private}来限制变量的作用域，从而避免了多线程对同一变量的读写冲突。具体而言，\codeinline{i}、\codeinline{j}和\codeinline{k}是循环变量，因此需要在每个线程中单独创建。在计算矩阵乘法时，将矩阵的每一行分配给不同的线程进行计算。对于每一个进程而言，其任务是将矩阵A的第i行与矩阵B的第j列相乘，然后将结果累加到矩阵C的第i行第j列。因此，在每一个线程的局部计算结束后，便得到了矩阵C的一部分，最后将这些部分合并即可得到最终结果。下述代码以8线程为例，具体代码如下：
+
+\begin{lstlisting}[language=c]
+// 8线程并行
+start = omp_get_wtime();
+
+#pragma omp parallel num_threads(8)
+{
+#pragma omp for private(i, j, k)
+    for (i = 0; i < N; i++)
+    {
+        for (j = 0; j < N; j++)
+        {
+            *(c + i * N + j) = 0;
+
+            for (k = 0; k < N; k++)
+            {
+                *(c + i * N + j) += *(a + i * N + k) * *(b + k * N + j);
+            }
+        }
+    }
+}
+
+end = omp_get_wtime();
+cpu_time_used = end - start;
+ratio = serial_time_used / cpu_time_used;
+
+printf("8线程并行计算时间:%f, 加速比:%f\n", cpu_time_used, ratio);
+\end{lstlisting}
+
+实验结果如\figref{fig:3}所示。观察结果可以发现，随着线程数的增加，在线程数量较少时，加速比可以看成线性增长，而档线程数为6、8、16时，加速比接近4.5，不再增长。出现这样的实验结果，是由于我分配给这台实验机器的虚拟CPU核心数为6，因此当线程数接近或者超过6时，在计算任务较长，CPU核心满载时，线程数的增加并不能带来更多的加速比，只会趋近于理论最大加速比6。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{image/3.jpg}
+  \caption{矩阵乘法计算实验结果}
+  \label{fig:3}
+\end{figure}
+
+\end{document}
