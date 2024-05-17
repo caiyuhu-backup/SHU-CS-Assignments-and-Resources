@@ -8,4 +8,4 @@
 
 - **仓库大小问题**：由于仓库大小的限制，部分代码用到的数据没有上传，代码能否运行随缘。
 - **时间久远**：仓库中的很多资源和作业可能由于时间久远，内容不再完全正确。
-- **使用建议** 课程资源具有时效性，每个学期也不需要其他学期的资源。实际使用时，你可以使用工具将所需的课程子文件夹打包为压缩文件进行下载。参考这个链接[GitZip for GitHub](https://chromewebstore.google.com/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn?hl=zh-CN&pli=1)。
+- **使用建议**：课程资源具有时效性，每个学期也不需要其他学期的资源。实际使用时，你可以使用工具将所需的课程子文件夹打包为压缩文件进行下载。参考这个链接[GitZip for GitHub](https://chromewebstore.google.com/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn?hl=zh-CN&pli=1)。
